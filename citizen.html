@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report Civic Issue</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f4f8;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #111;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .form-group input[type="file"] {
+      padding: 8px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #0056b3;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 15px;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📢 Report a Civic Issue</h1>
+  </header>
+
+  <div class="form-container">
+    <form>
+      <!-- Photo Upload -->
+      <div class="form-group">
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" accept="image/*" required />
+      </div>
+
+      <!-- Auto Location (disabled field for now) -->
+      <div class="form-group">
+        <label for="location">Location (auto-detected)</label>
+        <input type="text" id="location" placeholder="Getting your location..." disabled />
+      </div>
+
+      <!-- Category -->
+      <div class="form-group">
+        <label for="category">Issue Type</label>
+        <select id="category" required>
+          <option value="">-- Select an Issue --</option>
+          <option value="pothole">Pothole</option>
+          <option value="garbage">Garbage Overflow</option>
+          <option value="streetlight">Streetlight Problem</option>
+          <option value="water">Water Leakage</option>
+          <option value="sewage">Sewage Block</option>
+        </select>
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <label for="description">Describe the Issue</label>
+        <textarea id="description" rows="4" placeholder="Explain the issue in a few words..." required></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">📤 Submit Report</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    Civic Reporter • Empowering Local Voices © 2025
+  </div>
+
+</body>
+</html>
